@@ -996,8 +996,142 @@ footer {
 </div>
 
 <script>
-// ── CURSOR ──────────────────────────────────────────────────────
-const cursor = document.getElementById('cursor');
-[...]
+// ── ADMIN LOGIN ──────────────────────────────────────────────────────
+// Hardcoded admin credentials (frontend - always compromise-able, use server validation in production)
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "SFIJSA23Q5IJ";
 
-```
+function openAdmin(e) {
+  e.preventDefault();
+  document.getElementById("admin-modal").classList.add("open");
+}
+
+function closeAdmin() {
+  document.getElementById("admin-modal").classList.remove("open");
+  document.getElementById("admin-error").textContent = "";
+}
+
+function adminLogin() {
+  const user = document.getElementById("admin-user").value;
+  const pass = document.getElementById("admin-pass").value;
+  const errorEl = document.getElementById("admin-error");
+
+  if (user === ADMIN_USER && pass === ADMIN_PASS) {
+    document.getElementById("admin-modal").classList.remove("open");
+    document.getElementById("admin-panel").classList.add("open");
+    document.getElementById("admin-name-display").textContent = user;
+    errorEl.textContent = "";
+    loadAdminData();
+  } else {
+    errorEl.textContent = "❌ Invalid username or password.";
+  }
+}
+
+function logoutAdmin() {
+  document.getElementById("admin-panel").classList.remove("open");
+  document.getElementById("admin-user").value = "";
+  document.getElementById("admin-pass").value = "";
+}
+
+function loadAdminData() {
+  // Simulate loading data from localStorage (in production, fetch from server)
+  document.getElementById("adm-exec").textContent = "12,847";
+  document.getElementById("adm-exec-delta").textContent = "↑ +124 today";
+  document.getElementById("adm-keys").textContent = "342";
+  document.getElementById("adm-fail").textContent = "47";
+
+  // Populate key list from localStorage
+  const keysStr = localStorage.getItem("CTH_Keys") || "[]";
+  const keys = JSON.parse(keysStr);
+  const keyList = document.getElementById("key-list");
+  keyList.innerHTML = "";
+  keys.forEach((k) => {
+    const item = document.createElement("div");
+    item.className = "key-item";
+    item.innerHTML = `
+      <div class="key-item-val">${k}</div>
+      <button class="key-item-del" onclick="delKey('${k}')">Delete</button>
+    `;
+    keyList.appendChild(item);
+  });
+
+  // Populate activity log from localStorage
+  const actStr = localStorage.getItem("CTH_Activity") || "[]";
+  const acts = JSON.parse(actStr);
+  const actLog = document.getElementById("activity-log");
+  actLog.innerHTML = "";
+  acts.slice().reverse().slice(0, 20).forEach((a) => {
+    const item = document.createElement("div");
+    item.className = `activity-item ${a.type === "fail" ? "fail" : ""}`;
+    item.innerHTML = `
+      <div class="activity-dot"></div>
+      <div class="activity-text"><strong>${a.user}</strong> — ${a.msg}</div>
+      <div class="activity-time">${a.time}</div>
+    `;
+    actLog.appendChild(item);
+  });
+}
+
+function addKey() {
+  const input = document.getElementById("new-key-input");
+  const key = input.value.trim();
+  if (!key) return;
+
+  let keys = JSON.parse(localStorage.getItem("CTH_Keys") || "[]");
+  if (!keys.includes(key)) {
+    keys.push(key);
+    localStorage.setItem("CTH_Keys", JSON.stringify(keys));
+    input.value = "";
+    loadAdminData();
+  }
+}
+
+function generateKey() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let key = "CAT-";
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+      key += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    if (i < 3) key += "-";
+  }
+  document.getElementById("new-key-input").value = key;
+}
+
+function delKey(k) {
+  let keys = JSON.parse(localStorage.getItem("CTH_Keys") || "[]");
+  keys = keys.filter((x) => x !== k);
+  localStorage.setItem("CTH_Keys", JSON.stringify(keys));
+  loadAdminData();
+}
+
+// ── MISC ──────────────────────────────────────────────────────────────
+function copyScript() {
+  const code = `loadstring(game:HttpGet("https://raw.githubusercontent.com/randomgyattappers/MyScript/main/CatchThrowHub.lua"))()`;
+  navigator.clipboard.writeText(code).then(() => {
+    alert("Script copied to clipboard!");
+  });
+}
+
+function verifyKey() {
+  const keyInput = document.getElementById("key-input");
+  const msg = document.getElementById("key-msg");
+  const key = keyInput.value.trim();
+
+  if (!key) {
+    msg.textContent = "❌ Enter a key first.";
+    msg.className = "key-msg err";
+    return;
+  }
+
+  // In production, verify against server
+  // For demo, just accept any key and save it
+  localStorage.setItem("CTH_LastKey", key);
+  msg.textContent = "✓ Key saved! You can now use the script.";
+  msg.className = "key-msg ok";
+  keyInput.value = "";
+}
+</script>
+
+</body>
+</html>
