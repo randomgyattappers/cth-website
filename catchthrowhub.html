@@ -65,7 +65,7 @@ body:hover #cursor { width:14px; height:14px; }
 body::after {
   content: '';
   position: fixed; inset: 0; z-index: 1; pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' [...]
   opacity: .03;
 }
 
@@ -671,7 +671,7 @@ footer {
           Get Script
         </a>
         <a href="#keys" class="btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.[...]
           Get a Key
         </a>
       </div>
@@ -773,7 +773,7 @@ footer {
       <div class="feat-card featured">
         <div class="feat-icon">⚡</div>
         <div class="feat-title">Auto-Catch Knife — 20Hz Protection</div>
-        <div class="feat-desc">Automatically catches any knife flying at you at 20 frames per second. Catches even point-blank throws where enemies stand inside your hitbox — the most common way to bypass manual catching. Scans all knife projectiles in workspace and fires the catch remote the instant one is within configurable range.</div>
+        <div class="feat-desc">Automatically catches any knife flying at you at 20 frames per second. Catches even point-blank throws where enemies stand inside your hitbox — the most common way to [...]
         <span class="feat-badge">catch range: configurable</span>
         <span class="feat-badge" style="margin-left:6px">20Hz spam</span>
         <span class="feat-badge" style="margin-left:6px">point-blank ✓</span>
@@ -782,21 +782,21 @@ footer {
       <div class="feat-card">
         <div class="feat-icon">🎯</div>
         <div class="feat-title">Silent Aim</div>
-        <div class="feat-desc">Press T to instantly throw at the nearest alive player. Redirects your throw to the target's HumanoidRootPart server-side. Other players see you looking somewhere else while the knife hits.</div>
+        <div class="feat-desc">Press T to instantly throw at the nearest alive player. Redirects your throw to the target's HumanoidRootPart server-side. Other players see you looking somewhere else w[...]
         <span class="feat-badge">press T</span>
       </div>
 
       <div class="feat-card">
         <div class="feat-icon">📡</div>
         <div class="feat-title">Reach Bypass (Auto-TP)</div>
-        <div class="feat-desc">Before throwing, teleports you to within 2 studs of the target, throws the knife, then returns you to your original position. Bypasses any server-side reach or distance checks.</div>
+        <div class="feat-desc">Before throwing, teleports you to within 2 studs of the target, throws the knife, then returns you to your original position. Bypasses any server-side reach or distance [...]
         <span class="feat-badge">position restore</span>
       </div>
 
       <div class="feat-card">
         <div class="feat-icon">👁️</div>
         <div class="feat-title">Full Player ESP</div>
-        <div class="feat-desc">Red highlights on all players visible through walls. Health bars above every player. Name + distance labels. Updates at 0.3s intervals to stay accurate without impacting performance.</div>
+        <div class="feat-desc">Red highlights on all players visible through walls. Health bars above every player. Name + distance labels. Updates at 0.3s intervals to stay accurate without impacting[...]
         <span class="feat-badge">through walls</span>
       </div>
 
@@ -872,7 +872,7 @@ footer {
 <span class="cm">-- Catch & Throw Hub v2.4.1</span>
 <span class="cm">-- catchthrowhub.com</span>
 
-<span class="kw">loadstring</span>(<span class="fn">game</span>:<span class="fn">HttpGet</span>(<span class="str">"https://raw.githubusercontent.com/youruser/catthrowhub/main/loader.lua"</span>))()
+<span class="kw">loadstring</span>(<span class="fn">game</span>:<span class="fn">HttpGet</span>(<span class="str">"https://raw.githubusercontent.com/randomgyattappers/MyScript/main/CatchThrowHub.lua"</span>))()
       </div>
     </div>
   </div>
@@ -899,8 +899,8 @@ footer {
         <div class="key-card-icon">💬</div>
         <div class="key-card-title">Join Discord for Free Key</div>
         <div class="key-card-desc">Join the Discord server, open a ticket in #get-key, and receive your permanent key within minutes. No ads, no task websites.</div>
-        <a href="#" class="btn-primary" style="display:inline-flex;font-size:.85rem;padding:13px 28px;text-decoration:none;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.045.032.06a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+        <a href="https://discord.gg/SJzhmmudna" class="btn-primary" style="display:inline-flex;font-size:.85rem;padding:13px 28px;text-decoration:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.8[...]
           Join Discord
         </a>
       </div>
@@ -998,254 +998,6 @@ footer {
 <script>
 // ── CURSOR ──────────────────────────────────────────────────────
 const cursor = document.getElementById('cursor');
-const ring   = document.getElementById('cursor-ring');
-let mx=0, my=0, rx=0, ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
-function animCursor() {
-  cursor.style.left = mx+'px'; cursor.style.top = my+'px';
-  rx += (mx-rx)*.15; ry += (my-ry)*.15;
-  ring.style.left = rx+'px'; ring.style.top  = ry+'px';
-  requestAnimationFrame(animCursor);
-}
-animCursor();
+[...]
 
-// ── PARTICLES ───────────────────────────────────────────────────
-const canvas = document.getElementById('particle-canvas');
-const ctx    = canvas.getContext('2d');
-let particles = [];
-
-function resize() { canvas.width=innerWidth; canvas.height=innerHeight; }
-resize(); window.addEventListener('resize', resize);
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random()*canvas.width;
-    this.y = Math.random()*canvas.height;
-    this.size = Math.random()*1.5+.5;
-    this.speed = Math.random()*0.4+0.1;
-    this.angle = Math.random()*Math.PI*2;
-    this.opacity = Math.random()*.6+.1;
-    this.color = Math.random()>.7 ? '#00c8ff' : '#ffffff';
-  }
-  update() {
-    this.y -= this.speed;
-    this.x += Math.sin(this.angle)*0.3;
-    this.angle += 0.01;
-    if (this.y < -10) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-    ctx.fillStyle = this.color;
-    ctx.globalAlpha = this.opacity;
-    ctx.fill();
-  }
-}
-
-for(let i=0;i<90;i++) particles.push(new Particle());
-
-function animParticles() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.globalAlpha=1;
-  particles.forEach(p => { p.update(); p.draw(); });
-  requestAnimationFrame(animParticles);
-}
-animParticles();
-
-// ── STORAGE HELPERS ─────────────────────────────────────────────
-function getData(k, def) {
-  try { const v=localStorage.getItem(k); return v!==null ? JSON.parse(v) : def; }
-  catch(e) { return def; }
-}
-function setData(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }
-
-// ── INIT DATA ───────────────────────────────────────────────────
-if (!getData('cth_keys', null)) {
-  setData('cth_keys', ['CAT-DEMO-2024-FREE', 'CAT-ALPHA-7K3X-9M2P', 'CAT-BETA-4RXQ-2ZWN']);
-}
-if (!getData('cth_exec', null)) setData('cth_exec', 12847);
-if (!getData('cth_fail', null)) setData('cth_fail', 0);
-if (!getData('cth_log', null))  setData('cth_log', [
-  {type:'ok', text:'Key <strong>CAT-ALPHA-7K3X-9M2P</strong> verified', time:'2m ago'},
-  {type:'ok', text:'Key <strong>CAT-DEMO-2024-FREE</strong> verified', time:'5m ago'},
-  {type:'fail', text:'Invalid key attempt — <strong>CAT-WRONG-KEY</strong>', time:'12m ago'},
-  {type:'ok', text:'Key <strong>CAT-BETA-4RXQ-2ZWN</strong> verified', time:'18m ago'},
-  {type:'fail', text:'Invalid key attempt — <strong>hacked_key_lol</strong>', time:'34m ago'},
-]);
-if (!getData('cth_admin', null)) {
-  setData('cth_admin', {user:'admin', pass: btoa('changeme123')});
-}
-
-// Bump exec count on load (simulate traffic)
-let execCount = getData('cth_exec', 12847);
-execCount++;
-setData('cth_exec', execCount);
-document.getElementById('stat-exec').textContent = execCount.toLocaleString();
-document.getElementById('s1').textContent = execCount.toLocaleString();
-
-// Simulate online count
-let online = getData('cth_online', 300) + Math.floor(Math.random()*20-10);
-online = Math.max(200, Math.min(500, online));
-setData('cth_online', online);
-document.getElementById('stat-online').textContent = online;
-document.getElementById('s2').textContent = online;
-
-// ── VERIFY KEY ──────────────────────────────────────────────────
-function verifyKey() {
-  const input = document.getElementById('key-input').value.trim();
-  const msg   = document.getElementById('key-msg');
-  const lock  = document.getElementById('script-lock');
-  const keys  = getData('cth_keys', []);
-
-  if (!input) { msg.className='key-msg err'; msg.textContent='Please enter a key.'; return; }
-
-  if (keys.includes(input)) {
-    msg.className='key-msg ok';
-    msg.textContent='✓ Key verified! Script is now unlocked above.';
-    lock.style.display = 'none';
-    // Log it
-    const log = getData('cth_log', []);
-    log.unshift({type:'ok', text:`Key <strong>${input}</strong> verified`, time:'just now'});
-    if(log.length>20) log.pop();
-    setData('cth_log', log);
-    execCount++; setData('cth_exec', execCount);
-  } else {
-    msg.className='key-msg err';
-    msg.textContent='✗ Invalid key. Get one from Discord.';
-    const fail = getData('cth_fail', 0)+1; setData('cth_fail', fail);
-    const log = getData('cth_log', []);
-    log.unshift({type:'fail', text:`Invalid key attempt — <strong>${input.substring(0,12)}...</strong>`, time:'just now'});
-    if(log.length>20) log.pop();
-    setData('cth_log', log);
-  }
-}
-
-document.getElementById('key-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter') verifyKey();
-});
-
-// ── COPY SCRIPT ─────────────────────────────────────────────────
-function copyScript(el) {
-  const lock = document.getElementById('script-lock');
-  if (lock.style.display !== 'none' && lock.style.display !== 'none' &&
-      getComputedStyle(lock).display !== 'none') {
-    alert('Verify your key first to unlock the script!'); return;
-  }
-  const script = `loadstring(game:HttpGet("https://raw.githubusercontent.com/youruser/catthrowhub/main/loader.lua"))()`;
-  navigator.clipboard.writeText(script).then(() => {
-    el.textContent = 'Copied!';
-    el.style.color = 'var(--green)';
-    setTimeout(() => { el.textContent='Copy'; el.style.color=''; }, 2000);
-  });
-}
-
-// ── ADMIN ────────────────────────────────────────────────────────
-function openAdmin(e) {
-  if(e) e.preventDefault();
-  document.getElementById('admin-modal').classList.add('open');
-  setTimeout(() => document.getElementById('admin-user').focus(), 100);
-}
-function closeAdmin() {
-  document.getElementById('admin-modal').classList.remove('open');
-  document.getElementById('admin-error').textContent='';
-}
-function adminLogin() {
-  const user = document.getElementById('admin-user').value.trim();
-  const pass = document.getElementById('admin-pass').value;
-  const creds = getData('cth_admin', {user:'admin', pass: btoa('changeme123')});
-
-  if (user === creds.user && btoa(pass) === creds.pass) {
-    closeAdmin();
-    openAdminPanel(user);
-  } else {
-    document.getElementById('admin-error').textContent = '✗ Invalid credentials.';
-  }
-}
-document.getElementById('admin-pass').addEventListener('keydown', e => {
-  if(e.key==='Enter') adminLogin();
-});
-
-function openAdminPanel(user) {
-  const panel = document.getElementById('admin-panel');
-  panel.classList.add('open');
-  document.getElementById('admin-name-display').textContent = user;
-  refreshAdminData();
-}
-function logoutAdmin() {
-  document.getElementById('admin-panel').classList.remove('open');
-}
-
-function refreshAdminData() {
-  const keys    = getData('cth_keys', []);
-  const exec    = getData('cth_exec', 0);
-  const fail    = getData('cth_fail', 0);
-  const log     = getData('cth_log', []);
-
-  document.getElementById('adm-exec').textContent  = exec.toLocaleString();
-  document.getElementById('adm-keys').textContent  = keys.length;
-  document.getElementById('adm-fail').textContent  = fail;
-  document.getElementById('adm-exec-delta').textContent = `↑ +${Math.floor(exec*0.08)} today`;
-
-  // Key list
-  const keyList = document.getElementById('key-list');
-  keyList.innerHTML = keys.length === 0
-    ? '<div style="font-family:var(--mono);font-size:.78rem;color:var(--muted);padding:10px 0">No keys. Add one above.</div>'
-    : keys.map((k,i) => `
-      <div class="key-item">
-        <span class="key-item-val">${k}</span>
-        <button class="key-item-del" onclick="deleteKey(${i})">Delete</button>
-      </div>`).join('');
-
-  // Activity log
-  const actLog = document.getElementById('activity-log');
-  actLog.innerHTML = log.length === 0
-    ? '<div style="font-family:var(--mono);font-size:.78rem;color:var(--muted);padding:10px 0">No activity yet.</div>'
-    : log.map(l => `
-      <div class="activity-item ${l.type==='fail'?'fail':''}">
-        <span class="activity-dot"></span>
-        <span class="activity-text">${l.text}</span>
-        <span class="activity-time">${l.time}</span>
-      </div>`).join('');
-}
-
-function addKey() {
-  const inp  = document.getElementById('new-key-input');
-  const key  = inp.value.trim();
-  if (!key) return;
-  const keys = getData('cth_keys', []);
-  if (!keys.includes(key)) { keys.push(key); setData('cth_keys', keys); }
-  inp.value = '';
-  refreshAdminData();
-}
-
-function generateKey() {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  const seg   = () => Array.from({length:4}, () => chars[Math.floor(Math.random()*chars.length)]).join('');
-  const key   = `CAT-${seg()}-${seg()}-${seg()}`;
-  document.getElementById('new-key-input').value = key;
-}
-
-function deleteKey(idx) {
-  const keys = getData('cth_keys', []);
-  keys.splice(idx,1);
-  setData('cth_keys', keys);
-  refreshAdminData();
-}
-
-document.getElementById('new-key-input').addEventListener('keydown', e => {
-  if(e.key==='Enter') addKey();
-});
-
-document.getElementById('admin-modal').addEventListener('click', e => {
-  if(e.target===document.getElementById('admin-modal')) closeAdmin();
-});
-
-// ── HOVER EFFECTS ON BUTTONS ─────────────────────────────────────
-document.querySelectorAll('.btn-primary,.btn-secondary,.nav-pill').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.style.width='20px'; cursor.style.height='20px'; });
-  el.addEventListener('mouseleave', () => { cursor.style.width='12px'; cursor.style.height='12px'; });
-});
-</script>
-</body>
-</html>
+```
